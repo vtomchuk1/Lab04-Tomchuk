@@ -28,35 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lab04_Tomchuk));
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_fileOUT = new System.Windows.Forms.Button();
+            this.button_fileIN = new System.Windows.Forms.Button();
+            this.textBox_fileOUT = new System.Windows.Forms.TextBox();
+            this.textBox_fileIN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label_len = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button_KEYsave = new System.Windows.Forms.Button();
+            this.button_KEYopen = new System.Windows.Forms.Button();
+            this.button_KEYgenerator = new System.Windows.Forms.Button();
+            this.textBox_fileKEY = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.label_time = new System.Windows.Forms.Label();
+            this.button_start = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.button_fileOUT);
+            this.groupBox1.Controls.Add(this.button_fileIN);
+            this.groupBox1.Controls.Add(this.textBox_fileOUT);
+            this.groupBox1.Controls.Add(this.textBox_fileIN);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -69,45 +70,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Файли";
             // 
-            // button2
+            // button_fileOUT
             // 
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(562, 70);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_fileOUT.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_fileOUT.Location = new System.Drawing.Point(562, 70);
+            this.button_fileOUT.Margin = new System.Windows.Forms.Padding(5);
+            this.button_fileOUT.Name = "button_fileOUT";
+            this.button_fileOUT.Size = new System.Drawing.Size(31, 30);
+            this.button_fileOUT.TabIndex = 5;
+            this.button_fileOUT.Text = "...";
+            this.button_fileOUT.UseVisualStyleBackColor = true;
+            this.button_fileOUT.Click += new System.EventHandler(this.button_fileOUT_Click);
             // 
-            // button1
+            // button_fileIN
             // 
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(562, 25);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_fileIN.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_fileIN.Location = new System.Drawing.Point(562, 25);
+            this.button_fileIN.Margin = new System.Windows.Forms.Padding(5);
+            this.button_fileIN.Name = "button_fileIN";
+            this.button_fileIN.Size = new System.Drawing.Size(31, 30);
+            this.button_fileIN.TabIndex = 4;
+            this.button_fileIN.Text = "...";
+            this.button_fileIN.UseVisualStyleBackColor = true;
+            this.button_fileIN.Click += new System.EventHandler(this.button_fileIN_Click);
             // 
-            // textBox2
+            // textBox_fileOUT
             // 
-            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(167, 70);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(382, 30);
-            this.textBox2.TabIndex = 3;
+            this.textBox_fileOUT.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_fileOUT.Location = new System.Drawing.Point(167, 70);
+            this.textBox_fileOUT.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox_fileOUT.Name = "textBox_fileOUT";
+            this.textBox_fileOUT.Size = new System.Drawing.Size(382, 30);
+            this.textBox_fileOUT.TabIndex = 3;
             // 
-            // textBox1
+            // textBox_fileIN
             // 
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(167, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(382, 30);
-            this.textBox1.TabIndex = 2;
+            this.textBox_fileIN.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_fileIN.Location = new System.Drawing.Point(167, 25);
+            this.textBox_fileIN.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox_fileIN.Name = "textBox_fileIN";
+            this.textBox_fileIN.Size = new System.Drawing.Size(382, 30);
+            this.textBox_fileIN.TabIndex = 2;
             // 
             // label2
             // 
@@ -133,12 +136,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label_len);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.button_KEYsave);
+            this.groupBox2.Controls.Add(this.button_KEYopen);
+            this.groupBox2.Controls.Add(this.button_KEYgenerator);
+            this.groupBox2.Controls.Add(this.textBox_fileKEY);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(14, 139);
@@ -150,14 +153,62 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ключ";
             // 
-            // textBox3
+            // label_len
             // 
-            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(167, 25);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(269, 30);
-            this.textBox3.TabIndex = 1;
+            this.label_len.AutoSize = true;
+            this.label_len.Location = new System.Drawing.Point(163, 76);
+            this.label_len.Name = "label_len";
+            this.label_len.Size = new System.Drawing.Size(56, 23);
+            this.label_len.TabIndex = 6;
+            this.label_len.Text = "59 біт";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 76);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 23);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Розмір ключа:";
+            // 
+            // button_KEYsave
+            // 
+            this.button_KEYsave.Image = global::Lab04_Tomchuk.Properties.Resources.esave;
+            this.button_KEYsave.Location = new System.Drawing.Point(444, 25);
+            this.button_KEYsave.Name = "button_KEYsave";
+            this.button_KEYsave.Size = new System.Drawing.Size(75, 74);
+            this.button_KEYsave.TabIndex = 4;
+            this.button_KEYsave.UseVisualStyleBackColor = true;
+            this.button_KEYsave.Click += new System.EventHandler(this.button_KEYsave_Click);
+            // 
+            // button_KEYopen
+            // 
+            this.button_KEYopen.Image = global::Lab04_Tomchuk.Properties.Resources.eopen;
+            this.button_KEYopen.Location = new System.Drawing.Point(525, 25);
+            this.button_KEYopen.Name = "button_KEYopen";
+            this.button_KEYopen.Size = new System.Drawing.Size(75, 74);
+            this.button_KEYopen.TabIndex = 3;
+            this.button_KEYopen.UseVisualStyleBackColor = true;
+            this.button_KEYopen.Click += new System.EventHandler(this.button_KEYopen_Click);
+            // 
+            // button_KEYgenerator
+            // 
+            this.button_KEYgenerator.Image = global::Lab04_Tomchuk.Properties.Resources.ekey;
+            this.button_KEYgenerator.Location = new System.Drawing.Point(274, 63);
+            this.button_KEYgenerator.Name = "button_KEYgenerator";
+            this.button_KEYgenerator.Size = new System.Drawing.Size(75, 48);
+            this.button_KEYgenerator.TabIndex = 2;
+            this.button_KEYgenerator.UseVisualStyleBackColor = true;
+            this.button_KEYgenerator.Click += new System.EventHandler(this.button_KEYgenerator_Click);
+            // 
+            // textBox_fileKEY
+            // 
+            this.textBox_fileKEY.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_fileKEY.Location = new System.Drawing.Point(167, 25);
+            this.textBox_fileKEY.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox_fileKEY.Name = "textBox_fileKEY";
+            this.textBox_fileKEY.Size = new System.Drawing.Size(269, 30);
+            this.textBox_fileKEY.TabIndex = 1;
             // 
             // label3
             // 
@@ -181,78 +232,34 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Тривалість шифрування (мін:сек:мс):";
             // 
-            // label5
+            // label_time
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(360, 277);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 23);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "00:00:000";
+            this.label_time.AutoSize = true;
+            this.label_time.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_time.Location = new System.Drawing.Point(360, 277);
+            this.label_time.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label_time.Name = "label_time";
+            this.label_time.Size = new System.Drawing.Size(28, 23);
+            this.label_time.TabIndex = 2;
+            this.label_time.Text = "\\0";
             // 
-            // button3
+            // button_start
             // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(274, 63);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 48);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(525, 25);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 74);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(444, 25);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 74);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 76);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 23);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Розмір ключа:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(163, 76);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 23);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "59 біт";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(514, 269);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(108, 31);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Старт";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button_start.Location = new System.Drawing.Point(514, 269);
+            this.button_start.Name = "button_start";
+            this.button_start.Size = new System.Drawing.Size(108, 31);
+            this.button_start.TabIndex = 3;
+            this.button_start.Text = "Старт";
+            this.button_start.UseVisualStyleBackColor = true;
+            this.button_start.Click += new System.EventHandler(this.button_start_Click);
             // 
             // Lab04_Tomchuk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 313);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button_start);
+            this.Controls.Add(this.label_time);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -273,22 +280,23 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_fileOUT;
+        private System.Windows.Forms.Button button_fileIN;
+        private System.Windows.Forms.TextBox textBox_fileOUT;
+        private System.Windows.Forms.TextBox textBox_fileIN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_fileKEY;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_time;
+        private System.Windows.Forms.Button button_KEYgenerator;
+        private System.Windows.Forms.Button button_KEYsave;
+        private System.Windows.Forms.Button button_KEYopen;
+        private System.Windows.Forms.Label label_len;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button_start;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
